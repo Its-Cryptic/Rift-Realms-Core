@@ -1,0 +1,16 @@
+{
+  "item.riftrealms.zircon": "Zircon",
+  "item.riftrealms.raw_zircon": "Raw Zircon",
+
+  "block.riftrealms.zircon_block": "Zircon Block",
+
+  "itemGroup.riftrealms": "Rift Realms",
+  "itemGroup.aspects": "Aspects",
+
+  "aspect_proficiency": "Aspect Proficiency",
+
+  "key.category.riftrealms.tutorial": "Rift Realms",
+  "key.riftrealms.drink_water": "Drink Water",
+  "message.riftrealms.drink_water": "This water tastes like shit what the fuck",
+  "message.riftrealms.cant_drink_water": "Dumbass where is the water"
+}
