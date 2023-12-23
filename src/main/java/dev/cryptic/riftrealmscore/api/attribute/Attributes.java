@@ -20,8 +20,8 @@ public class Attributes {
     public static final HashMap<RegistryObject<Attribute>, UUID> UUIDS = new HashMap<>();
     public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, RiftRealmsCore.MODID);
 
-    public static final RegistryObject<Attribute> ASPECT_PROFICIENCY = registerAttribute("aspect_proficiency",(id) -> new RangedAttribute(id, 0.0D, 0, 10).setSyncable(true), "cd455036-75b4-4013-b9ea-ecccfe08f917");
-    public static final RegistryObject<Attribute> ASPECT_POWER = registerAttribute("aspect_power",(id) -> new RangedAttribute(id, 0.0D, 0, 10).setSyncable(true), "53dd12dd-383d-41fa-b5e9-a0334ea07ffb");
+    public static final RegistryObject<Attribute> CRIT_CHANCE = registerAttribute("critical_chance",(id) -> new RangedAttribute(id, 0.0D, 0, 10).setSyncable(true), "9151a22c-aa35-4531-bf31-f68ad2a42059");
+    public static final RegistryObject<Attribute> CRIT_MULTIPLIER = registerAttribute("critical_multiplier",(id) -> new RangedAttribute(id, 1.0D, 1, 10).setSyncable(true), "91fedee5-78b7-4ba0-8996-54ad76aefec4");
 
 
     public static RegistryObject<Attribute> registerAttribute(String name, Function<String, Attribute> attribute, String uuid) {
@@ -41,8 +41,8 @@ public class Attributes {
 //            event.add(entity, ASPECT_PROFICIENCY.get());
 //            event.add(entity, ASPECT_POWER.get());
 //        });
-        event.add(EntityType.PLAYER, ASPECT_PROFICIENCY.get());
-        event.add(EntityType.PLAYER, ASPECT_POWER.get());
+        event.add(EntityType.PLAYER, CRIT_CHANCE.get());
+        event.add(EntityType.PLAYER, CRIT_MULTIPLIER.get());
     }
 
 //    @SubscribeEvent
