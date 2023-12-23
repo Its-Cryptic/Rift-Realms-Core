@@ -11,7 +11,7 @@ public class Calculations {
         if (item.getItem().equals(ModItems.MY_AWESOME_SWORD.get())) {
             return true;
         } else {
-            return false;
+            return true;
         }
     }
 
