@@ -20,7 +20,7 @@ public class Attributes {
     public static final HashMap<RegistryObject<Attribute>, UUID> UUIDS = new HashMap<>();
     public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, RiftRealmsCore.MODID);
 
-    public static final RegistryObject<Attribute> CRIT_CHANCE = registerAttribute("critical_chance",(id) -> new RangedAttribute(id, 0.0D, 0, 10).setSyncable(true), "9151a22c-aa35-4531-bf31-f68ad2a42059");
+    public static final RegistryObject<Attribute> CRIT_CHANCE = registerAttribute("critical_chance",(id) -> new RangedAttribute(id, 0.0D, 0, 100).setSyncable(true), "9151a22c-aa35-4531-bf31-f68ad2a42059");
     public static final RegistryObject<Attribute> CRIT_MULTIPLIER = registerAttribute("critical_multiplier",(id) -> new RangedAttribute(id, 1.0D, 1, 10).setSyncable(true), "91fedee5-78b7-4ba0-8996-54ad76aefec4");
 
 
