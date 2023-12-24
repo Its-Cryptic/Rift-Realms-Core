@@ -1,4 +1,4 @@
-package dev.cryptic.riftrealmscore.api.util;
+package dev.cryptic.riftrealmscore.api.util.Calculations;
 
 import dev.cryptic.riftrealmscore.item.ModItems;
 import net.minecraft.world.entity.player.Player;
