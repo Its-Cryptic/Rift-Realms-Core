@@ -19,18 +19,25 @@ import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.ToolAction;
 import net.minecraftforge.common.ToolActions;
 
+import java.util.UUID;
+
 public class CustomSwordItem extends Item {
     private final float attackDamage;
+    private final float critChance;
     private final Multimap<Attribute, AttributeModifier> defaultModifiers;
 
-    public CustomSwordItem(float attackDamage, float attackSpeed, Properties properties) {
+    protected static final UUID BASE_CRIT_CHANCE_UUID = UUID.fromString("FA233E1C-4180-4865-B01B-BCCE9785ACA3");
+
+    public CustomSwordItem(int attackDamage, float attackSpeed, int critChance, Properties properties) {
         super(properties);
 
         this.attackDamage = attackDamage;
+        this.critChance = critChance;
 
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", (double)this.attackDamage, AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", (double)attackSpeed, AttributeModifier.Operation.ADDITION));
+        builder.put(dev.cryptic.riftrealmscore.api.attribute.Attributes.CRIT_CHANCE.get(), new AttributeModifier(BASE_CRIT_CHANCE_UUID, "Weapon modifier", this.critChance, AttributeModifier.Operation.ADDITION));
         this.defaultModifiers = builder.build();
     }
 
