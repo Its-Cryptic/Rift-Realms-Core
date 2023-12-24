@@ -36,37 +36,7 @@ public class Attributes {
 
     @SubscribeEvent
     public static void modifyEntityAttributes(EntityAttributeModificationEvent event) {
-//        event.getTypes().forEach(entity -> {
-//            RiftRealmsCore.LOGGER.error(entity.toString());
-//            event.add(entity, ASPECT_PROFICIENCY.get());
-//            event.add(entity, ASPECT_POWER.get());
-//        });
         event.add(EntityType.PLAYER, CRIT_CHANCE.get());
         event.add(EntityType.PLAYER, CRIT_MULTIPLIER.get());
     }
-
-//    @SubscribeEvent
-//    public static void modifyEntityAttributes(EntityAttributeModificationEvent event) {
-//        event.getTypes().stream().filter(e -> e == EntityType.PLAYER).forEach(e -> {
-//            ATTRIBUTES.getEntries().forEach((v)->{
-//                event.add(e, v.get());
-//            });
-//        });
-//    }
-
-//    @SubscribeEvent
-//    public static void modifyEntityAttributes(EntityAttributeModificationEvent event) {
-//        for (EntityType<? extends LivingEntity> e : event.getTypes())
-//            if (e == EntityType.PLAYER) for (RegistryObject<Attribute> v : ATTRIBUTES.getEntries())
-//                event.add(e, v.get());
-//    }
-
-//    @SubscribeEvent
-//    public void modifyEntityAttributes(EntityAttributeModificationEvent event) {
-//        if (!event.has(EntityType.PLAYER, ASPECT_PROFICIENCY.get())) {
-//            event.add(EntityType.PLAYER, ASPECT_PROFICIENCY.get());
-//        }
-//    }
-
-
 }
