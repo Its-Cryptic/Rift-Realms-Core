@@ -203,8 +203,8 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-1.19.2-forge:${jeiVersion}")
 
     // Curios Dependency
-    //compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-${curiosVersion}:api")
-    //runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-${curiosVersion}")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-${curiosVersion}:api")
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.2-${curiosVersion}")
 
     // Lodestone Dependency
     //implementation fg.deobf("team.lodestar.lodestone:lodestone:${minecraftVersion}-${lodestoneVersion}")
