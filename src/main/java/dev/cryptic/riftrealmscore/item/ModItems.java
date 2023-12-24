@@ -24,7 +24,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> MY_EVEN_BETTER_SWORD = ITEMS.register("my_best_sword",
-            () -> new CustomSwordItem( 50, -2.4F,
+            () -> new CustomSwordItem( 50, -2.4F, 0.5F,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static void register(IEventBus eventBus) {

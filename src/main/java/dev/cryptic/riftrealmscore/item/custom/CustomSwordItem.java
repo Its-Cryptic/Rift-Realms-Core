@@ -26,9 +26,9 @@ public class CustomSwordItem extends Item {
     private final float critChance;
     private final Multimap<Attribute, AttributeModifier> defaultModifiers;
 
-    protected static final UUID BASE_CRIT_CHANCE_UUID = UUID.fromString("FA233E1C-4180-4865-B01B-BCCE9785ACA3");
+    protected static final UUID BASE_CRIT_CHANCE_UUID = UUID.fromString("727d925a-fa31-4cac-bc91-cbcc37469522");
 
-    public CustomSwordItem(int attackDamage, float attackSpeed, int critChance, Properties properties) {
+    public CustomSwordItem(int attackDamage, float attackSpeed, float critChance, Properties properties) {
         super(properties);
 
         this.attackDamage = attackDamage;
