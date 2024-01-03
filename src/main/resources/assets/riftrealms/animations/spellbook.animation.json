@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.spellbook.book_open": {
+			"animation_length": 0.625,
+			"bones": {
+				"l_page": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, -55],
+							"easing": "easeInElastic",
+							"easingArgs": [1.4]
+						}
+					}
+				},
+				"r_page": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 55],
+							"easing": "easeInElastic",
+							"easingArgs": [1.4]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

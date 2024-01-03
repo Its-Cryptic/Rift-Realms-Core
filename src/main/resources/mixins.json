@@ -1,0 +1,8 @@
+{
+  "package": "dev.riftrealmsteam.riftrealmscore.mixin",
+  "mixins": [
+    "CameraMixin"
+  ],
+  "client": [],
+  "server": []
+}

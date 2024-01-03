@@ -5,10 +5,13 @@ import dev.riftrealmsteam.riftrealmscore.api.capabilities.PlayerAspectEnergy;
 import dev.riftrealmsteam.riftrealmscore.api.capabilities.PlayerAspectEnergyProvider;
 import dev.riftrealmsteam.riftrealmscore.api.networking.ModMessages;
 import dev.riftrealmsteam.riftrealmscore.api.networking.packet.ThirstDataSyncS2CPacket;
+import dev.riftrealmsteam.riftrealmscore.api.util.ClientInfo;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
@@ -71,6 +74,18 @@ public class ModEvents {
                         ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(energy.getEnergy()), player);
                     });
                 }
+            }
+        }
+
+        @SubscribeEvent
+        public static void updateClientInfoTick(TickEvent.ServerTickEvent event) {
+            if (event.phase == TickEvent.Phase.END) {
+                ClientInfo.setServerTime(event.getServer().getTickCount());
+                ClientInfo.setLevelTime(event.getServer().getLevel(Level.OVERWORLD).getGameTime());
+                event.getServer().getPlayerList().getPlayers().forEach(player -> {
+                    //player.sendSystemMessage(Component.literal("Server Time: " + ClientInfo.serverTime));
+                    //player.sendSystemMessage(Component.literal("Level Time: " + ClientInfo.levelTime));
+                });
             }
         }
 
